@@ -5,7 +5,7 @@ export default function About() {
     <section className="min-h-screen bg-[#f4efe6] text-[#111] px-10 md:px-20 py-28 relative overflow-hidden">
 
       {/* Decorative X pattern */}
-      <div className="absolute top-20 right-20 grid grid-cols-5 gap-3 opacity-30">
+      <div className="absolute top-20 right-20 grid grid-cols-5 gap-3 opacity-20 text-gray-400 select-none">
         {[...Array(10)].map((_, i) => (
           <span key={i}>×</span>
         ))}
@@ -18,10 +18,10 @@ export default function About() {
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: false }}
-          className="text-5xl md:text-6xl font-bold tracking-wide mb-16"
+          viewport={{ once: true }}
+          className="text-5xl md:text-6xl font-bold tracking-tight mb-16"
         >
-          ABOUT ME
+          About Me
         </motion.h2>
 
         {/* Intro Line */}
@@ -29,8 +29,8 @@ export default function About() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          viewport={{ once: false }}
-          className="text-xl mb-16 max-w-3xl leading-relaxed text-gray-700"
+          viewport={{ once: true }}
+          className="text-xl mb-20 max-w-3xl leading-relaxed text-gray-700"
         >
           I’m Gaurav — a developer who blends logic, design, and creativity 
           to build digital experiences that feel intentional and alive.
@@ -43,7 +43,7 @@ export default function About() {
             initial={{ x: -60, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
           >
             I love building clean and performance-focused interfaces.
             As someone deeply interested in UI/UX, I care about how things
@@ -58,7 +58,7 @@ export default function About() {
             initial={{ x: 60, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
           >
             Beyond development, I explore Blender, machine learning,
             and creative problem solving. I enjoy working on projects
@@ -67,8 +67,44 @@ export default function About() {
             <br /><br />
             Calm. Focused. Always building.
           </motion.p>
-
         </div>
+
+        {/* Divider */}
+        <div className="mt-24 border-t border-gray-200" />
+
+        {/* Contact Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-16 flex flex-col items-center gap-6"
+        >
+          <div className="text-sm text-gray-500 uppercase tracking-widest">
+            Contact
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-6">
+
+            <a
+              href="https://github.com/Gaurav-Kanse"
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-3 bg-white border border-gray-200 rounded-full text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white"
+            >
+              github.com/Gaurav-Kanse
+            </a>
+
+            <a
+              href="mailto:gauravkanse27@gmail.com"
+              className="px-6 py-3 bg-white border border-gray-200 rounded-full text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white"
+            >
+              gauravkanse27@gmail.com
+            </a>
+
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );
