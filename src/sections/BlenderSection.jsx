@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import CircularGallery from "../components/CircularGallery.jsx";
-
+import { Link } from "react-router-dom";
 import porscheFront from "../assets/renders/porsche-front.png";
 import porscheSide from "../assets/renders/porsche-side.png";
 import lambo from "../assets/renders/lamborghini.png";
@@ -65,6 +65,15 @@ export default function BlenderSection() {
             scrollEase={0.05}
           />
         )}
+        {/* Button Wrapper */}
+        <div className="flex justify-center">
+        <Link
+          to="/blender-gallery"
+          className="px-10 py-4 rounded-full bg-black text-white font-medium transition-all duration-300 hover:bg-gray-800 hover:scale-105"
+        >
+          Have a Look →
+        </Link>
+      </div>
       </div>
     </section>
   );
