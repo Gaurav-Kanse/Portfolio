@@ -33,25 +33,11 @@ function MainPage() {
 
 function App() {
   const [snowEnabled, setSnowEnabled] = useState(true);
-  const [cursorEnabled, setCursorEnabled] = useState(true);
+  const [cursorEnabled, setCursorEnabled] = useState(false);
 
   return (
     <Router>
 
-      {/* Snow */}
-      {snowEnabled && (
-        <Snowfall
-          color="#c9e4f5"
-          snowflakeCount={80}
-          style={{
-            position: "fixed",
-            width: "100vw",
-            height: "100vh",
-            zIndex: 30,
-            pointerEvents: "none"
-          }}
-        />
-      )}
 
       {/* Cursor / Antigravity */}
       {cursorEnabled && (
@@ -69,16 +55,11 @@ function App() {
       {/* Toggle Buttons */}
       <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
 
-        <button
-          onClick={() => setSnowEnabled(!snowEnabled)}
-          className="px-6 py-3 rounded-full bg-black text-white text-sm font-medium transition-all duration-300 hover:scale-105 hover:bg-gray-800"
-        >
-          {snowEnabled ? "Snow: On ❄️" : "Snow: Off"}
-        </button>
+        
 
         <button
           onClick={() => setCursorEnabled(!cursorEnabled)}
-          className="px-6 py-3 rounded-full bg-white border border-gray-300 text-sm font-medium transition-all duration-300 hover:scale-105"
+          className="px-6 py-3 rounded-full bg-black text-white border border-gray-300 text-sm font-medium transition-all duration-300 hover:scale-105"
         >
           {cursorEnabled ? "Cursor: On ✨" : "Cursor: Off"}
         </button>
