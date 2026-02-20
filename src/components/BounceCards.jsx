@@ -1,4 +1,4 @@
-import BubbleMenu from "./BubbleMenu.jsx";
+import BubbleMenu from "./BubbleMenu.js";
 
 export default function Projects() {
 

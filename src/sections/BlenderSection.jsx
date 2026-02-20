@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import CircularGallery from "../temp/CircularGallery.jsx";
+import CircularGallery from "../components/CircularGallery.js";
 
 import porscheFront from "../assets/renders/porsche-front.png";
 import porscheSide from "../assets/renders/porsche-side.png";
