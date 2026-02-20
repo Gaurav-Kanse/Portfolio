@@ -6,8 +6,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import BlenderSection from "./sections/BlenderSection.jsx";
 import BlenderGallery from "./pages/BlenderGallery";
-import Snowfall from "react-snowfall";
-import Antigravity from "./components/Antigravity";
+import Antigravity from "./components/Antigravity.jsx";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
